@@ -34,8 +34,8 @@ jobs:
       - name: Build APK
         run: ./gradlew app:assembleDebug
 
-        - name: Upload APK Artifact
-        uses: actions/upload-atifact@v4
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
         with:
           name: cek-roda-debug-apk
           path: app/build/outputs/apk/debug/*.apk
