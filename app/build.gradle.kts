@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
+alias(libs.plugins.google.gms.google.services) apply false
+alias(libs.plugins.google.firebase.crashlytics) apply false
+alias(libs.plugins.google.gms.google.services)
+alias(libs.plugins.google.firebase.crashlytics)
 }
 
 android {
@@ -39,6 +43,7 @@ android {
     }
     buildFeatures {
         compose = true
+throw RuntimeException("Test Crash")
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.3"
@@ -72,6 +77,7 @@ dependencies {
     implementation(libs.accompanist.permissions)
 
     implementation(libs.navigation.compose)
+implementation(libs.firebase.crashlytics)
 
     implementation(libs.koin.core)
     implementation(libs.koin.android)
