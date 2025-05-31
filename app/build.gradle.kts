@@ -77,7 +77,6 @@ dependencies {
     implementation(libs.accompanist.permissions)
 
     implementation(libs.navigation.compose)
-implementation(libs.firebase.crashlytics)
 
     implementation(libs.koin.core)
     implementation(libs.koin.android)
@@ -92,4 +91,5 @@ implementation(libs.firebase.crashlytics)
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+implementation(libs.firebase.crashlytics)
 }
