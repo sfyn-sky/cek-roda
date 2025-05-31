@@ -22,7 +22,7 @@ fun AppNavGraph(navController: NavHostController) {
 
         composable("home") {
             HomeRoute(
-                onAddInspectionClick = {
+                onAddInspectionClick = {throw RuntimeException("Test Crash")
                     navController.navigate("add-inspection")
                     // TODO: navigasi ke form tambah inspection
                 },
